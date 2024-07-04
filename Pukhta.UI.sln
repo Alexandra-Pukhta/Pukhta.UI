@@ -5,7 +5,9 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pukhta.UI", "Pukhta.UI\Pukhta.UI.csproj", "{9BEE6A83-7981-4759-8323-66E9DE2BFCB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cars.Domain", "Cars.Domain\Cars.Domain.csproj", "{9D75D3F1-49D7-4D8F-88FA-93C0C8D859CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cars.Domain", "Cars.Domain\Cars.Domain.csproj", "{9D75D3F1-49D7-4D8F-88FA-93C0C8D859CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pukhta.API", "Pukhta.API\Pukhta.API.csproj", "{6961E48B-6342-431F-A095-950007D6A627}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9D75D3F1-49D7-4D8F-88FA-93C0C8D859CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D75D3F1-49D7-4D8F-88FA-93C0C8D859CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D75D3F1-49D7-4D8F-88FA-93C0C8D859CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6961E48B-6342-431F-A095-950007D6A627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6961E48B-6342-431F-A095-950007D6A627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6961E48B-6342-431F-A095-950007D6A627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6961E48B-6342-431F-A095-950007D6A627}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

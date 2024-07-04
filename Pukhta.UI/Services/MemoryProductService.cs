@@ -44,33 +44,33 @@ namespace Pukhta.UI.Services
                 Image = "Images/011.jpg",
                 CategoryId = _categories.Find(c => c.NormalizedName.Equals("Внедорожные")).Id }, 
 
-            new Car { Id = 3, Name = "BMW",
+            new Car { Id = 1, Name = "BMW",
                 Description = "Легковая красная",
                 Image = "Images/033.jfif",
                 CategoryId = _categories.Find(c => c.NormalizedName.Equals("Легковые")).Id },
   
-            new Car { Id = 4, Name = "Freightliner",
+            new Car { Id = 3, Name = "Freightliner",
                 Description = "Грузовая серая",
                 Image = "Images/036.jfif",
                 CategoryId = _categories.Find(c => c.NormalizedName.Equals("Грузовые")).Id },
 
 
-            new Car { Id = 5, Name = "AUDI",
+            new Car { Id = 2, Name = "AUDI",
                 Description = "Внедорожник оранжевый",
                 Image = "Images/099.jpg",
                 CategoryId = _categories.Find(c => c.NormalizedName.Equals("Внедорожные")).Id },
             
-            new Car { Id = 6, Name = "Freightliner",
+            new Car { Id = 3, Name = "Freightliner",
                 Description = "Грузовая голубая",
                 Image = "Images/035.jfif",
                 CategoryId = _categories.Find(c => c.NormalizedName.Equals("Грузовые")).Id },
            
-            new Car { Id = 7, Name = "AUDI",
+            new Car { Id = 2, Name = "AUDI",
                 Description = "Внедорожник серый",
                 Image = "Images/023.jfif",
                 CategoryId = _categories.Find(c => c.NormalizedName.Equals("Внедорожные")).Id },
             
-            new Car { Id = 8, Name = "BMW",
+            new Car { Id = 1, Name = "BMW",
                 Description = "Легковая голубая",
                 Image = "Images/055.jfif",
                 CategoryId = _categories.Find(c => c.NormalizedName.Equals("Легковые")).Id },

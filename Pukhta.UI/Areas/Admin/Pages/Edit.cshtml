@@ -1,0 +1,69 @@
+﻿@page
+@model Pukhta.UI.Areas.Admin.Pages.EditModel
+@{
+    ViewData["Title"] = "Edit";
+
+}
+
+<h1>Редактирование</h1>
+
+<h4>Товар</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="product.Id" />
+
+            <div class="form-group">
+                <label asp-for="product.Name" class="control-label"></label>
+                <input asp-for="product.Name" class="form-control" />
+                <span asp-validation-for="product.Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="product.Description" class="control-label"></label>
+                <input asp-for="product.Description" class="form-control" />
+                <span asp-validation-for="product.Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                @if (!string.IsNullOrEmpty(Model.product.Image))
+                {
+                    <img src=~/Images/@Model.product.Image alt="NoSuchFile" width="150" />
+                }
+                else
+                {
+                    <h4>Файл изображения не задан</h4>
+                }
+                <div class="custom-file mt-3">
+                    <input type="file" class="custom-file-input"
+                           asp-for="Image" id="customFile">
+                    <label class="custom-file-label" for="customFile">
+                        Выберите файл изображения
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label asp-for="product.CategoryId" class="control-label"></label>
+                    <select asp-for="product.CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                    <span asp-validation-for="product.CategoryId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Назад</a>
+</div>
+
+@section Scripts {
+    <script src="~/js/bs-custom-file-input.js"></script>
+    <script>
+        bsCustomFileInput.init();
+    </script>
+}
+}
+
