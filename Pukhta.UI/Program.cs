@@ -41,7 +41,7 @@ namespace Pukhta.UI
             builder.Services.AddScoped<IProductService, MemoryProductService>();
 
             builder.Services.AddHttpClient<IProductService, ApiCarService>(opt
-            => opt.BaseAddress = new Uri("https://localhost:7002/api/Cars/"));
+            => opt.BaseAddress = new Uri("https://localhost:7002/api/Products/"));
             builder.Services.AddHttpClient<ICategoryService, ApiCategoryService>(opt
             => opt.BaseAddress = new
             Uri("https://localhost:7002/api/Categories/"));

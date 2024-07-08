@@ -1,0 +1,31 @@
+﻿
+@page "/products"
+@using Pukhta.Blazor.Components.ProductComponents
+@using Cars.Domain.Entities
+@using Cars.Domain.Models
+@using Pukhta.Blazor.Services
+
+
+@rendermode InteractiveServer
+
+<CascadingValue Value="ProductService">
+<KosList ProductSelected="ShowDetails" />
+<Pager/>
+</CascadingValue>
+
+<KosDetails product="SelectedProduct" />
+
+@code {
+[Inject] IProductService<Car> ProductService { get; set; }
+
+[Parameter]
+  public Car SelectedProduct { get; set; }
+  protected override async Task OnInitializedAsync()
+  {
+  await ProductService.GetProducts();
+  }
+  void ShowDetails(int id)
+  {
+  SelectedProduct = ProductService.Products.First(d => d.Id == id);
+  }
+}

@@ -1,0 +1,23 @@
+﻿@using Cars.Domain.Entities
+@using Pukhta.UI
+<h3>Детали</h3>
+
+
+
+	@if(product!=null)
+	{
+	<div class="card mt-5" style="width: 18rem;">
+	<img src="@product.Image" class="card-img-top" alt="...">
+	<div class="card-body">
+	<h5 class="card-title">@product.Name</h5>
+	<p class="card-text">@product.Description</p>
+
+	</div>
+	</div>
+	}
+	@code {
+	[Parameter]
+	public Car product { get; set; }
+	[Parameter]
+	public EventCallback<Car> ProductChanged { get; set; }
+	}
